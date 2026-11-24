@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morgan Playhouse - Rental PlayStation & Nintendo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#beranda" class="nav-logo">
+                <i class="fas fa-gamepad"></i> MORGAN PLAYHOUSE
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#beranda">Beranda</a>
+                <a href="#games">Game</a>
+                <a href="#price">Harga</a>
+                <a href="#menu">Menu</a>
+                <a href="#booking">Booking</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+            <div class="nav-actions">
+                <button id="adminBtn" class="btn-icon hidden" title="Admin Login">
+                    <i class="fas fa-user-shield"></i>
+                </button>
+                <button id="menuToggle" class="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda" class="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="floating-shapes">
+                <div class="shape s1"></div>
+                <div class="shape s2"></div>
+                <div class="shape s3"></div>
+                <div class="shape s4"></div>
+                <div class="shape s5"></div>
+                <div class="shape s6"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">PLAYSTATION 5 & NINTENDO SWITCH RENTAL</div>
+            <h1 class="hero-title">
+                <span class="title-line">MORGAN</span>
+                <span class="title-line title-accent">PLAYHOUSE</span>
+            </h1>
+            <p class="hero-desc">Rasakan pengalaman bermain game terbaik bersama teman-temanmu. Konsol next-gen, game
+                terbaru, dan suasana nyaman menantimu!</p>
+            <div class="hero-actions">
+                <a href="#booking" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-alt"></i> BOOKING SEKARANG
+                </a>
+                <a href="#games" class="btn btn-outline btn-lg">
+                    <i class="fas fa-th"></i> LIHAT GAME
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Game Tersedia</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="2">0</span>
+                    <span class="stat-label">Konsol</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="8">0</span>
+                    <span class="stat-label">Maks Pemain</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section id="games" class="section">
+        <div class="container">
+            <div class="section-header anim-fade">
+                <span class="section-badge">KOLEKSI GAME</span>
+                <h2 class="section-title">DAFTAR GAME</h2>
+                <p class="section-desc">Pilih dari koleksi game terbaik untuk PS5 dan Nintendo Switch</p>
+            </div>
+            <div class="tabs anim-fade" id="gameTabs">
+                <button class="tab active" data-tab="ps5">
+                    <i class="fab fa-playstation"></i> PS5
+                </button>
+                <button class="tab" data-tab="nintendo">
+                    <i class="fas fa-dice"></i> Nintendo Switch
+                </button>
+            </div>
+            <div class="game-grid" id="gameGrid"></div>
+        </div>
+    </section>
+
+    <section id="price" class="section section-alt">
+        <div class="container">
+            <div class="section-header anim-fade">
+                <span class="section-badge">PAKET RENTAL</span>
+                <h2 class="section-title">DAFTAR HARGA</h2>
+                <p class="section-desc">Pilih paket yang sesuai dengan kebutuhan bermainmu</p>
+            </div>
+            <div class="price-grid" id="priceGrid"></div>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <div class="section-header anim-fade">
+                <span class="section-badge">HIDANGAN & MINUMAN</span>
+                <h2 class="section-title">DAFTAR MENU</h2>
+                <p class="section-desc">Nikmati berbagai menu lezat selama bermain</p>
+            </div>
+            <div class="tabs anim-fade" id="menuTabs">
+                <button class="tab active" data-tab="makanan">
+                    <i class="fas fa-utensils"></i> Makanan
+                </button>
+                <button class="tab" data-tab="minuman">
+                    <i class="fas fa-mug-hot"></i> Minuman
+                </button>
+                <button class="tab" data-tab="camilan">
+                    <i class="fas fa-cookie-bite"></i> Camilan
+                </button>
+            </div>
+            <div class="menu-grid" id="menuGrid"></div>
+        </div>
+    </section>
+
+    <section id="booking" class="section section-alt">
+        <div class="container">
+            <div class="section-header anim-fade">
+                <span class="section-badge">RESERVASI ONLINE</span>
+                <h2 class="section-title">BOOKING SEKARANG</h2>
+                <p class="section-desc">Pilih jadwal yang tersedia dan isi formulir untuk melakukan reservasi</p>
+            </div>
+            <div class="booking-layout">
+                <div class="schedule-panel anim-fade">
+                    <h3><i class="fas fa-calendar-day"></i> Jadwal Tersedia</h3>
+                    <div class="date-nav" id="dateNav"></div>
+                    <div class="time-slots" id="timeSlots">
+                        <p class="empty-msg">Pilih tanggal untuk melihat jadwal</p>
+                    </div>
+                </div>
+                <form class="booking-form anim-fade" id="bookingForm" novalidate>
+                    <h3><i class="fas fa-edit"></i> Formulir Booking</h3>
+                    <div class="form-group">
+                        <label for="bNama">Nama Lengkap <span class="required">*</span></label>
+                        <input type="text" id="bNama" required placeholder="Masukkan nama lengkap" autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="bTelepon">Nomor Telepon <span class="required">*</span></label>
+                        <input type="tel" id="bTelepon" required placeholder="Contoh: 081234567890" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="bPaket">Paket Rental <span class="required">*</span></label>
+                        <select id="bPaket" required>
+                            <option value="">-- Pilih paket --</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bRuangan">Pilih Ruangan <span class="required">*</span></label>
+                        <select id="bRuangan" required>
+                            <option value="">-- Pilih paket rental terlebih dahulu --</option>
+                            <optgroup label="Ruangan PS5" id="optPS5">
+                                <option value="PS5 - Room 01">PS5 - Ruangan 01</option>
+                                <option value="PS5 - Room 02">PS5 - Ruangan 02</option>
+                                <option value="PS5 - Room 03">PS5 - Ruangan 03</option>
+                            </optgroup>
+                            <optgroup label="Ruangan Nintendo" id="optNintendo">
+                                <option value="Nintendo - Room 01">Nintendo - Ruangan 01</option>
+                                <option value="Nintendo - Room 02">Nintendo - Ruangan 02</option>
+                                <option value="Nintendo - Room 03">Nintendo - Ruangan 03</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bTanggal">Tanggal <span class="required">*</span></label>
+                            <input type="date" id="bTanggal" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bJam">Jam <span class="required">*</span></label>
+                            <input type="text" id="bJam" readonly required placeholder="Pilih dari jadwal">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="bCatatan">Catatan Tambahan / Pesanan Menu</label>
+                        <textarea id="bCatatan" rows="3"
+                            placeholder="Contoh tulis pesanan: 2 Mie Goreng, Es Teh Manis, French Fries"></textarea>
+                    </div>
+
+                    <div id="liveReceipt" style="margin-bottom: 20px;"></div>
+
+                    <button type="submit" class="btn btn-primary btn-full btn-lg">
+                        <i class="fas fa-paper-plane"></i> KIRIM BOOKING
+                    </button>
+                </form>
+            </div>
+            <div class="check-status anim-fade">
+                <h3><i class="fas fa-search"></i> Cek Status Booking</h3>
+                <p>Masukkan nomor telepon yang digunakan saat booking untuk melihat status</p>
+                <div class="check-form">
+                    <input type="tel" id="checkPhone" placeholder="081234567890">
+                    <button id="checkBtn" class="btn btn-primary">Cek Status</button>
+                </div>
+                <div id="checkResult"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="section">
+        <div class="container">
+            <div class="section-header anim-fade">
+                <span class="section-badge">HUBUNGI KAMI</span>
+                <h2 class="section-title">KONTAK & LOKASI</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-cards anim-fade">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Alamat</h4>
+                        <p>Jatinangor City Park, Ruko No.9, Cibeusi, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h4>Telepon / WhatsApp</h4>
+                        <p>0812-3456-7890</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <h4>Jam Operasional</h4>
+                        <p>Setiap Hari: 10:00 - 22:00 WIB</p>
+                    </div>
+                    <a href="https://www.instagram.com/morgan.playhouse" target="_blank" class="instagram-card">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <h4>Instagram</h4>
+                            <p>@morgan.playhouse</p>
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@morgan.playhouse" target="_blank" class="tiktok-card">
+                        <div class="contact-card">
+                            <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
+                            <h4>TikTok</h4>
+                            <p>@morgan.playhouse</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-map anim-fade">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.929356583207!2d107.76083427477042!3d-6.940500793059522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c38bf7a1a9f9%3A0x5d4be9153bb922fd!2sMorgan%20Playhouse!5e1!3m2!1sid!2sid!4v1781493294601!5m2!1sid!2sid"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-gamepad"></i> MORGAN PLAYHOUSE</h3>
+                    <p>Rental PlayStation 5 & Nintendo Switch terbaik. Main game terbaru bersama teman dalam suasana
+                        nyaman.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <a href="#beranda">Beranda</a>
+                    <a href="#games">Daftar Game</a>
+                    <a href="#price">Daftar Harga</a>
+                    <a href="#menu">Menu</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <a href="#booking">Booking Online</a>
+                    <a href="#kontak">Kontak</a>
+                    <a href="#booking">Cek Status</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Jam Buka</h4>
+                    <p>Senin - Minggu</p>
+                    <p>10:00 - 22:00 WIB</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/morgan.playhouse" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6281234567890" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.tiktok.com/@morgan.playhouse" target="_blank" aria-label="TikTok"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Morgan Playhouse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose" aria-label="Tutup">×</button>
+            <div class="modal-icon"><i class="fas fa-user-shield"></i></div>
+            <h3>Admin Login</h3>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="adminUser">Username</label>
+                    <input type="text" id="adminUser" required placeholder="Masukkan username" autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="adminPass">Password</label>
+                    <input type="password" id="adminPass" required placeholder="Masukkan password"
+                        autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">MASUK</button>
+
+                <div class="forgot-password-link">
+                    <a href="#" id="forgotPassBtn">Lupa Password?</a>
+                </div>
+
+                <p class="modal-hint">Default: admin / admin123</p>
+            </form>
+        </div>
+    </div>
+
+    <div id="forgotModal" class="modal hidden">
+        <div class="modal-overlay" id="forgotModalOverlay"></div>
+        <div class="modal-box">
+            <button class="modal-close" id="forgotModalClose" aria-label="Tutup">×</button>
+            <div class="modal-icon" style="color: var(--gold); background: var(--gold-dim);"><i class="fas fa-key"></i>
+            </div>
+            <h3>Reset Password Admin</h3>
+            <form id="forgotForm" novalidate>
+                <div class="form-group">
+                    <label for="securityQuestion">Pertanyaan Keamanan</label>
+                    <input type="text" id="securityQuestion" readonly value="Siapa nama game favorit pertama Anda?">
+                </div>
+                <div class="form-group">
+                    <label for="securityAnswer">Jawaban Anda <span class="required">*</span></label>
+                    <input type="text" id="securityAnswer" required placeholder="Masukkan jawaban keamanan">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full"
+                    style="background: var(--gold); box-shadow: 0 0 20px var(--gold-dim);">VERIFIKASI JAWABAN</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="adminPanel" class="admin-panel hidden">
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <i class="fas fa-gamepad"></i>
+                    <span>ADMIN PANEL</span>
+                </div>
+                <button id="sidebarToggle" class="btn-icon sidebar-toggle-btn" aria-label="Toggle sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav" id="sidebarNav">
+                <button class="sidebar-link active" data-section="dashboard">
+                    <i class="fas fa-chart-pie"></i> <span>Dashboard</span>
+                </button>
+                <button class="sidebar-link" data-section="bookings">
+                    <i class="fas fa-calendar-check"></i> <span>Data Booking</span>
+                </button>
+                <button class="sidebar-link" data-section="customers">
+                    <i class="fas fa-users"></i> <span>Pelanggan</span>
+                </button>
+                <button class="sidebar-link" data-section="packages">
+                    <i class="fas fa-box-open"></i> <span>Paket & Harga</span>
+                </button>
+                <button class="sidebar-link" data-section="schedule">
+                    <i class="fas fa-clock"></i> <span>Jadwal Rental</span>
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="backToSite" class="btn-outline-sm">
+                    <i class="fas fa-arrow-left"></i> Kembali ke Website
+                </button>
+                <button id="logoutBtn" class="btn-danger-sm">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+        <main class="admin-main" id="adminMain">
+        </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
